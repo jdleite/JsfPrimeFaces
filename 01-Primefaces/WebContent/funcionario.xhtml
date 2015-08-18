@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -16,7 +16,7 @@
 			<h:form id="func" enctype="multipart/form-data">
 				<p:growl autoUpdate="true"/>
 				<h:panelGrid columns="2">
-					<p:outputLabel value="Nome" for="nome"/>
+					<p:outputLabel value="Nome do Funcionario" for="nome"/>
 					<p:inputText id="nome"
 						value="#{funcionarioBean.funcionario.nome}"/>
 					
@@ -51,7 +51,7 @@
 			toggleable="true" toggleOrientation="vertical">
 			<h:form>
 				<h:panelGrid columns="3">
-					<p:outputLabel value="Nome" for="busca"/>
+					<p:outputLabel value="Nome do Funcionario" for="busca"/>
 					<p:autoComplete id="busca"
 						value="#{funcionarioBean.nomeBusca}"
 						completeMethod="#{funcionarioBean.completarNome}"/>
