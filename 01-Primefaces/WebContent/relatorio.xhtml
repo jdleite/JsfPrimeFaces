@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/_template.xhtml">
+	<ui:define name="content">
+		<h1>Relatórios</h1>
+		<p:tabView>
+			<p:tab title="Vendas">
+				<h2>Relatório - Gráfico de Pizza</h2>
+				<p:chart type="pie" model="#{relatorioBean.grafico}" />
+			</p:tab>
+			<p:tab title="Vendas por período" disabled="false">
+				<h2>Relatório - Gráfico de Linha</h2>
+				<p:chart type="line" model="#{relatorioBean.graficoLinha}" />
+			</p:tab>
+		</p:tabView>
+	</ui:define>
+</ui:composition>
+</html>
+
+

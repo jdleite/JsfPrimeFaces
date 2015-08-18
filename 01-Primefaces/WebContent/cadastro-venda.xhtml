@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/_template.xhtml">
+	<ui:define name="content">
+	    <h1>Registrar Venda</h1>
+		<p:panel toggleable="true" toggleOrientation="vertical"
+			header="Vendas"> 
+	    <h:form>
+	    	<p:messages autoUpdate="true"/>
+	    	<p:growl autoUpdate="true"/>	    	
+	    	<h:panelGrid columns="2">
+	    		<p:outputLabel value="Data" for="data"/>
+	    		<p:calendar value="#{vendaBean.venda.data.time}"
+	    			id="data" pattern="dd/MM/yyyy"/>
+	    		
+	    		<p:outputLabel value="Valor" for="valor"/>
+	    		<p:inputText value="#{vendaBean.venda.valor}"
+	    			id="valor"/>
+	    			
+	    		<p:outputLabel value="Item" for="item"/>
+	    		<p:selectOneMenu value="#{vendaBean.venda.item}"
+	    			id="item">
+	    			<f:selectItem itemLabel="Pastel Carne" itemValue="Pastel Carne"/>
+	    			<f:selectItem itemLabel="Pastel Queijo" itemValue="Pastel Queijo"/>
+	    			<f:selectItem itemLabel="Pastel Frango" itemValue="Pastel Frango"/>
+	    			<f:selectItem itemLabel="Pastel Pizza" itemValue="Pastel Pizza"/>
+	    		</p:selectOneMenu>
+	    			
+	    		<p:commandButton value="Cadastrar"
+	    			actionListener="#{vendaBean.cadastrar}"/>		
+	    		
+	    	</h:panelGrid>
+	    </h:form>
+	    </p:panel>
+	</ui:define>	
+</ui:composition>
+</html>
+
+

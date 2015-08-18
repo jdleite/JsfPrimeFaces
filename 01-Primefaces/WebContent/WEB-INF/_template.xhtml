@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title>FIAP Market</title>
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
+</h:head>
+
+<h:body>
+	<p:menubar>
+		<p:submenu label="Vendas">
+			<p:menuitem outcome="cadastro-venda" value="Cadastro"/>
+			<p:menuitem outcome="lista-venda" value="Listagem"/>
+		</p:submenu>
+		<p:menuitem outcome="relatorio" value="Relatório"/>
+		<p:menuitem outcome="funcionario" value="Funcionário"/>
+	</p:menubar>
+	<div id="content">
+	  <ui:insert name="content">    	
+	  </ui:insert>
+	</div>
+</h:body>
+
+</html>
